@@ -17,8 +17,10 @@ class App extends React.Component {
   }
 
   handleClick = (event) => {
-    this.getQuote()
-    console.log("yay!!");
+    this.setState({isLoading : true},()=>{
+      this.getQuote()
+    })
+    
   };
 
   getQuote = ()=>{
@@ -26,7 +28,7 @@ class App extends React.Component {
       //.then(res=>{ res.json() })
       .then(result=>{
         const data = result.data[0]
-        console.log(data)
+        
         this.setState({
           quote : data.quote ,
           author : data.character ,
@@ -47,7 +49,8 @@ class App extends React.Component {
       <>
         <h2 className="header">Random Simpson Quote Generator</h2>
         <div id="quote-box">
-          {!isLoading && <QuoteBox quote={quote} author={author} img={imgURL}/>}
+        
+          {isLoading ? <div className="loadingSpinner"></div> :  <QuoteBox quote={quote} author={author} img={imgURL}/>}
         </div>
         <button onClick={this.handleClick}>Generate Another Quote</button>
         
