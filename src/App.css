@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Pangolin&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  font-size: 20px;
+}
+
+div {
+  position: relative;
+}
+
+.header {
+  position: absolute;
+  top: 0px;
+  font-family: 'Bangers', cursive;
+  font-size: 50px;
+  color: #4b504c;
+}
+
+button {
+  position: absolute;
+  bottom: 100px;
+}
+
+#root {
+  background: #fbe2e5;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+button {
+  width: auto;
+  padding: 1rem 2rem;
+  height: auto;
+  font-family: 'Bangers', cursive;
+  font-weight: 700;
+  font-size: 2.5rem;
+  background: transparent;
+  border: 3px solid #4b504c;
+  -webkit-box-shadow: 8px 8px #ff8981;
+          box-shadow: 8px 8px #ff8981;
+  cursor: pointer;
+  -webkit-transform: 2s ease;
+          transform: 2s ease;
+}
+
+button:active {
+  position: absolute;
+  bottom: 92px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-shadow: none;
+}
+
+#quote-box {
+  width: 420px;
+  height: 320px;
+  font-family: 'Pangolin', cursive;
+  color: #4b504c;
+}
+
+#quote-box #text {
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform: perspective(500px);
+          transform: perspective(500px);
+}
+
+#quote-box #text .front, #quote-box #text .back {
+  border-radius: 25px;
+  -webkit-box-shadow: 11px 11px 26px #fabea7,  -11px -11px 26px #fbe2e5;
+          box-shadow: 11px 11px 26px #fabea7,  -11px -11px 26px #fbe2e5;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  overflow: hidden;
+}
+
+#quote-box #text .back {
+  padding: 2rem;
+  background: #fbe2e5;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+#quote-box #text .front {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#quote-box #text .front > img {
+  height: 100%;
+}
+
+#quote-box:hover #text {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+/*# sourceMappingURL=App.css.map */
